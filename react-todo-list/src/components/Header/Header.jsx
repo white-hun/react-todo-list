@@ -6,6 +6,7 @@ export default function Header({ filters, filter, onFilterChange }) {
       <ul>
         {filters.map((value, index) => (
           <li key={index}>
+            {/* 클릭을 하면 원하는 것으로 변경 */}
             <button onClick={() => onFilterChange(value)}>{value}</button>
           </li>
         ))}
