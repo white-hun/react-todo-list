@@ -16,7 +16,7 @@ export default function Todo({ todo, onUpdate, onDelete }) {
         checked={status === "completed"}
         onChange={handleChange}
       />
-      <label htmlFor="checkbok">{text}</label>
+      <label htmlFor="checkbox">{text}</label>
       <button onClick={handleDelete}>
         <BsTrash3 />
       </button>
