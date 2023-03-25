@@ -11,7 +11,6 @@ export default function AddTodo({ onAdd }) {
       return;
     }
     onAdd({ id: uuidv4(), text: text, status: "active" });
-    saveTodos({ id: uuidv4(), text: text, status: "active" });
     setText("");
   };
   return (
@@ -30,9 +29,3 @@ export default function AddTodo({ onAdd }) {
 
 // Todolist에서 받아온 onAdd에 {object}를 넘겨준다 handleAdd의 todo에 들어간다
 // trim text에 여백이 사라진다
-
-const TODOS_KEY = "todos";
-
-function saveTodos({ todo }) {
-  localStorage.setItem(TODOS_KEY, JSON.stringify({ todo }));
-}
